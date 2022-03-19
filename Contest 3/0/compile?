@@ -1,0 +1,4 @@
+aarch64-linux-gnu-gcc -o program-arm -static main.c f.c
+qemu-aarch64 program-arm
+qemu-aarch64 ./program-arm
+readelf -h ./program-arm
