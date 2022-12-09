@@ -15,7 +15,7 @@ int exec_permission_enabled(char* buf)
 int is_elf(int descriptor)
 {
     char buf[good_const];
-    const char ELF[] = {0x7f, 'E', 'L', 'F'};
+    const char ELF[] = {0x7f, 'E', 'L', 'F', '\0'};
 
     lseek(descriptor, 0, SEEK_SET);
     if (read(descriptor, buf, 4) != 4)
